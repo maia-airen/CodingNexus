@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+   
+  .nav-section {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0.5;
+}
+
+.nav-item {
+    color: black;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.small-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-nav-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+}
+
+.mobile-nav-items .nav-item {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mobile search bar */
+.mobile-search {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-search input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mobile-search button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.nav-item a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.nav-item a.active {
+  color: #972726; /* Highlight the active link */
+  font-weight: bold; /* You can add more styles for the active state */
+}
+
+.nav-item a:hover {
+  color: #972726; /* Change color on hover */
+  
+}
+
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .small-icon {
+        display: none;
+    }
+
+    .mobile-search {
+        display: flex; /* Show search bar on small screens */
+        position: absolute;
+        top: 70px; /* Position at 50% from the top of the viewport */
+        left: 50%; /* Position at 50% from the left of the viewport */
+        transform: translate(-50%, -50%); /* Move the element back by 50% of its own width and height to center it */
+        width: 70%; /* Set width to 60% for responsiveness */
+        justify-content: center; /* Center the contents horizontally */
+        align-items: center; /* Center the contents vertically */
+    }
+    
+
+    .mobile-nav-items {
+        display: none;
+    }
+
+    .mobile-nav-items.open {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-search {
+        display: none; /* Hide search bar on larger screens */
+    }
+}
+
+.logo {
+    max-height: 80px; /* Adjust this value based on your design */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* nav end */
+/* Responsive welcome text */
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Content Container */
+.content {
+  width: 100%;
+  padding: 25px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.right-section {
+  width: 100%;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-between; /* Align both containers horizontally */
+  background: white;
+  border-radius: 14px;
+  border: 1px solid black;
+  padding: 22px;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Space between containers */
+}
+
+.view-container {
+ 
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure wrapping of contents on smaller screens */
+}
+
+/* Profile Section */
+.profile-section {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+ 
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  background: #D9D9D9;
+  border-radius: 50%;
+  justify-content: center;
+  margin-left: 18%;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  gap: 0px;
+  width: 100%;
+  margin-left: 50%;
+}
+.profile-field {
+  margin-bottom: 15px; /* Add space below each input field */
+}
+
+
+.field-bg {
+  width: 100%;
+  height: 44px;
+  background: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+
+}
+
+.field-text {
+  font-size: 18px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  color: black;
+}
+
+/* Bio Section */
+.bio {
+  width: 100%;
+  height: 80px; /* Increase height for the bio field */
+  margin-bottom: 15px; /* Consistent spacing */
+}
+.bio .field-bg {
+  height: 100%; /* Allow bio field to fill the set height */
+}
+
+.bio-bg {
+  width: 100%;
+  background: white;
+  border: 1px solid black;
+}
+
+.bio-text {
+  font-size: 18px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  color: black;
+}
+
+/* Course Box */
+.course-box {
+  flex: 1; /* Make all course boxes take equal width */
+  max-width: 300px; /* Set a maximum width for each course box */
+  background: #F2F2F2;
+  border-radius: 13px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.course-headings {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 12px;
+}
+
+.course-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.course-number, .lesson-name {
+  color: black;
+  font-size: 12px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+.quiz-date{
+  color: #ff0400;
+  font-size: 12px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+
+.box-title{
+  text-align: center;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .user-sidebar {
+      width: 100%; /* Full width on smaller screens */
+  }
+
+  .profile-container {
+      flex-direction: column; /* Stack items vertically */
+  }
+
+  .view-container {
+    flex-direction: column; /* Stack boxes vertically on smaller screens */
+  }
+
+  .course-box {
+      max-width: 100%; /* Adjust to full width */
+  }
+
+  .course-headings {
+      flex-direction: column;
+      gap: 10px;
+  }
+}

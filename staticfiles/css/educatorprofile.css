@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+  }
+   
+  .nav-section {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0.5;
+}
+
+.nav-item {
+    color: black;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.small-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-nav-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+}
+
+.mobile-nav-items .nav-item {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mobile search bar */
+.mobile-search {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-search input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mobile-search button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.nav-item a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.nav-item a.active {
+  color: #972726; /* Highlight the active link */
+  font-weight: bold; /* You can add more styles for the active state */
+}
+
+.nav-item a:hover {
+  color: #972726; /* Change color on hover */
+  
+}
+
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .small-icon {
+        display: none;
+    }
+
+    .mobile-search {
+        display: flex; /* Show search bar on small screens */
+        position: absolute;
+        top: 70px; /* Position at 50% from the top of the viewport */
+        left: 50%; /* Position at 50% from the left of the viewport */
+        transform: translate(-50%, -50%); /* Move the element back by 50% of its own width and height to center it */
+        width: 70%; /* Set width to 60% for responsiveness */
+        justify-content: center; /* Center the contents horizontally */
+        align-items: center; /* Center the contents vertically */
+    }
+    
+
+    .mobile-nav-items {
+        display: none;
+    }
+
+    .mobile-nav-items.open {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-search {
+        display: none; /* Hide search bar on larger screens */
+    }
+}
+.logo {
+  max-height: 80px; /* Adjust this value based on your design */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* nav end */
+
+ /* Instructor Section */
+ .container {
+    width: 100%;
+    padding: 20px;
+}
+.instructor-section {
+    display: flex;
+    justify-content: center; /* Aligns the items horizontally */
+    align-items: flex-start; /* Aligns items at the top */
+    flex-direction: row; /* Horizontal layout */
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .instructor-image {
+    width: 318px;
+    height: 429px;
+    background: #D9D9D9;
+    background-image: url('assets/abt.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-right: 40px; /* Adds space between the image and the text */
+
+  }
+  
+  .instructor-text {
+    display: flex;
+    flex-direction: column; /* Stack the name and description vertically */
+    max-width: 600px;
+    line-height: 25px;
+  }
+  
+  .instructor-name {
+    color: black;
+    font-size: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    margin-bottom: 20px; /* Adds space between the name and description */
+    text-align: center;
+  }
+  
+  .instructor-description {
+    color: black;
+    font-size: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    text-align: justify;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .instructor-section {
+      flex-direction: column; /* Stacks the image and text vertically on small screens */
+      align-items: center;
+      text-align: center; /* Center the text on smaller screens */
+    }
+  
+    .instructor-image {
+      margin-right: 0; /* Remove right margin when stacked vertically */
+      margin-bottom: 20px; /* Adds space below the image */
+      width: 280px;
+      height: 320px;
+    }
+  
+    .instructor-description {
+      font-size: 16px;
+    }
+  
+    .instructor-name {
+      font-size: 22px;
+    }
+  }
+  

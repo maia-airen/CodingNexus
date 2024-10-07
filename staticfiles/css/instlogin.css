@@ -1,0 +1,148 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  position: relative;
+}
+
+
+/* Input Field Wrapper */
+.input-wrapper {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Input Background */
+.input-background {
+  width: 100%;
+  max-width: 500px;
+  height: 45px;
+  background: #d0d0d0;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+}
+
+/* Welcome Text */
+.welcome-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  flex-direction: row;/* Stack buttons vertically on smaller screens */
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+/* Buttons */
+.student-button, .instructor-button {
+  margin-top: 0; /* Remove any additional space above the buttons */
+  width: 245px;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 24px;
+  font-family: Poppins, sans-serif;
+  color: black;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.student-button {
+  background-color: #D9D9D9;
+}
+
+.instructor-button, .student-button:hover  {
+  background-color: #CB9393;
+}
+
+.continue-button {
+  width: 100%;
+  max-width: 500px;
+  height: 55px;
+  background: #CB9393;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin: 20px auto;
+  transition: background-color 0.3s;
+}
+.continue-button:hover {
+  background-color: #972726;
+}
+
+/* Footer */
+.footer {
+  background-color: #972726;
+  padding: 10px 20px;
+  text-align: center;
+  color: #fff;
+  margin-top: auto;
+}
+
+.footer-text {
+  font-size: 14px;
+  margin: 0;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-text {
+      font-size: 20px;
+  }
+  
+  .button-container {
+      flex-direction: column;
+  }
+
+  .continue-button {
+      max-width: none;
+      width: 100%;
+  }
+
+  .input-background {
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text {
+      font-size: 18px;
+  }
+
+  .input-background {
+      font-size: 16px;
+  }
+}
