@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+   
+  .nav-section {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0.5;
+}
+
+.nav-item {
+    color: black;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.small-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-nav-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+}
+
+.mobile-nav-items .nav-item {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mobile search bar */
+.mobile-search {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-search input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mobile-search button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.nav-item a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.nav-item a.active {
+  color: #972726; /* Highlight the active link */
+  font-weight: bold; /* You can add more styles for the active state */
+}
+
+.nav-item a:hover {
+  color: #972726; /* Change color on hover */
+  
+}
+
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .small-icon {
+        display: none;
+    }
+
+    .mobile-search {
+        display: flex; /* Show search bar on small screens */
+        position: absolute;
+        top: 70px; /* Position at 50% from the top of the viewport */
+        left: 50%; /* Position at 50% from the left of the viewport */
+        transform: translate(-50%, -50%); /* Move the element back by 50% of its own width and height to center it */
+        width: 70%; /* Set width to 60% for responsiveness */
+        justify-content: center; /* Center the contents horizontally */
+        align-items: center; /* Center the contents vertically */
+    }
+    
+
+    .mobile-nav-items {
+        display: none;
+    }
+
+    .mobile-nav-items.open {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-search {
+        display: none; /* Hide search bar on larger screens */
+    }
+}
+
+/* nav end */
+  
+  /* Responsive welcome text */
+  .container {
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* Content Container */
+.content {
+    width: 100%;
+    padding: 25px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.user-sidebar {
+    width: 337px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid black;
+    padding: 20px;
+    position: relative; /* Required to handle the absolute positioning inside */
+}
+
+.user-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 100px;
+    height: 100px;
+    background: #972726;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    z-index: 2; /* Ensure avatar stays on top */
+}
+
+.user-banner {
+    width: 100%;
+    height: 36px;
+    background: #C25B5B;
+    position: absolute; /* Positioning behind */
+    top: 187px; /* Adjust this to the desired position */
+    z-index: 1; /* Ensure it's behind the other elements */
+}
+
+.username {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    z-index: 2; /* Keep it on top of the banner */
+}
+
+a.view-profile, a.edit-profile, a.my-courses, a.my-exercises, a.my-quizzes, a.delete-account {
+    display: block; /* Make the anchor tag behave like a block element */
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+    text-decoration: none; /* Remove the underline from the links */
+    color: inherit; /* Inherit color from parent or set a specific color */
+}
+
+
+
+
+.right-section {
+    width: 100%;
+    
+}
+
+.profile-container {
+    background: white;
+    border-radius: 14px;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+
+}
+.change-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .circle {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    background: #D9D9D9;
+    border-radius: 9999px;
+  }
+  
+  .save-container {
+    width: 100%;
+    max-width:495px;
+    height: 50px;
+    position: absolute;
+    top: 320px;
+    left: 5%;
+  }
+  
+  .save-background {
+    width: 92%;
+    height: 100%;
+    background: #CB9393;
+    border-radius: 28px;
+    border: 1px solid black;
+    position: absolute;
+  }
+  
+  .save-text {
+    position: absolute;
+    left: 46%;
+    top: 15px;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+  }
+  
+  .upload-container {
+    width: 100%;
+    max-width: 141px;
+    height: 50px;
+    position: absolute;
+    left: 80%;
+    top: 250px;
+    transform: translateX(-50%);
+  }
+  
+  .upload-background {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 1px solid black;
+  }
+  
+  .upload-text {
+    position: absolute;
+    left: 50%;
+    top: 12px;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+  }
+  
+  .file-container {
+    width: 100%;
+    max-width: 335px;
+    height: 50px;
+    position: absolute;
+    left:6%;
+    top: 250px;
+  }
+  
+  .file-background {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 1px solid black;
+  }
+  
+  .file-text {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    color: black;
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+  }
+  
+  .change-image-text {
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .circle {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .save-container,
+    .file-container,
+    .upload-container {
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .save-text,
+    .upload-text,
+    .file-text {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .circle {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .save-container,
+    .file-container,
+    .upload-container {
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .save-text,
+    .upload-text,
+    .file-text {
+      font-size: 14px;
+    }
+  
+    .change-image-text {
+      font-size: 14px;
+    }
+  }
+  
+  
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .header {
+        font-size: 1.8em;
+    }
+
+    .description {
+        font-size: 0.9em;
+    }
+
+    .button-text {
+        font-size: 1em;
+    }
+
+    .delete-button {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.5em;
+    }
+
+    .description {
+        font-size: 0.8em;
+    }
+
+    .button-text {
+        font-size: 0.9em;
+    }
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 768px) {
+    .course-container {
+        width: 100%;
+        max-width: none; /* Remove max-width for smaller screens */
+    }
+
+    .course-box {
+        width: 100%;
+    }
+
+    .course-title {
+        font-size: 22px; /* Smaller font for mobile */
+    }
+
+    .course-heading {
+        font-size: 18px; /* Adjust heading size */
+    }
+
+    .course-number,
+    .lesson-name {
+        font-size: 14px; /* Reduce size for mobile */
+    }
+
+    .profile-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-title {
+        font-size: 20px; /* Even smaller on very small screens */
+    }
+
+    .course-heading {
+        font-size: 16px;
+    }
+
+    .course-number,
+    .lesson-name {
+        font-size: 14px;
+    }
+}

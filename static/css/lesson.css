@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-section {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0.5;
+}
+
+.nav-item {
+    color: black;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.small-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-nav-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+}
+
+.mobile-nav-items .nav-item {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mobile search bar */
+.mobile-search {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-search input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mobile-search button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.nav-item a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+  
+  .nav-item a.active {
+    color: #972726; /* Highlight the active link */
+    font-weight: bold; /* You can add more styles for the active state */
+  }
+  
+  .nav-item a:hover {
+    color: #972726; /* Change color on hover */
+    
+  }
+
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .small-icon {
+        display: none;
+    }
+
+    .mobile-search {
+        display: flex; /* Show search bar on small screens */
+        position: absolute;
+        top: 70px; /* Position at 50% from the top of the viewport */
+        left: 50%; /* Position at 50% from the left of the viewport */
+        transform: translate(-50%, -50%); /* Move the element back by 50% of its own width and height to center it */
+        width: 70%; /* Set width to 60% for responsiveness */
+        justify-content: center; /* Center the contents horizontally */
+        align-items: center; /* Center the contents vertically */
+    }
+    
+
+    .mobile-nav-items {
+        display: none;
+    }
+
+    .mobile-nav-items.open {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-search {
+        display: none; /* Hide search bar on larger screens */
+    }
+}
+
+.logo {
+    max-height: 80px; /* Adjust this value based on your design */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* nav end */
+ 
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+   
+    border-radius: 8px;
+}
+
+.course-info {
+    color: #A90505;
+    font-size: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1; /* Ensures it stays above the background */
+}
+
+.icon-rotate, .icon-right {
+    font-size: 24px;
+    color: #212121;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Positioning them within the header */
+}
+
+.icon-rotate {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-right {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.lesson-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.lesson-title {
+    font-size: 32px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 20px; /* Add spacing below the title */
+    text-align: center;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.lesson-description {
+    flex-grow: 1; /* Allows the description to take up remaining space between arrows */
+    margin: 0 20px; /* Adds space between arrows and description */
+    color: black;
+    font-size: 26px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.arrow {
+    width: 50px; /* Adjust the width for the arrows */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #212121;
+    cursor: pointer;
+}
+
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.presentation {
+    background: #D9D9D9;
+    border-radius: 24px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    height: 500px;
+}
+
+.presentation-text {
+    color: black;
+    font-size: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    text-align: center;
+}
+
+.example {
+    background: #D9D9D9;
+    border-radius: 24px;
+    padding: 20px;
+    margin: 20px 0;
+    
+}
+
+.code-example {
+    background: #262020;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    word-wrap: break-word;
+    margin-top: 10px;
+}
+
+.example-heading {
+    color: black;
+    font-size: 20px;
+    font-family: JetBrains Mono;
+    font-weight: 700;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.lesson-buttons {
+    display: flex;
+    justify-content: center; /* Horizontally centers the buttons */
+    align-items: center; /* Vertically centers the buttons */
+    margin-top: 20px; /* Add some spacing from the content above */
+  }
+  
+  .lesson-buttons button {
+    background-color: #972726;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .lesson-buttons button:hover {
+    background-color: #7b1f1f;
+  }
+  
+  /* Responsive Design for buttons */
+  @media (max-width: 768px) {
+    .lesson-buttons button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+  
+  
+
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-info{
+        font-size: 12px;
+    }
+    .lesson-title {
+        font-size: 20px;
+    }
+
+    .lesson-description {
+        font-size: 16px;
+    }
+
+    .icon-rotate, .icon-right {
+        font-size: 18px;
+    }
+
+    .arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .presentation, .example {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .code-example {
+        font-size: 12px;
+    }
+}

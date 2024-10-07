@@ -1,0 +1,628 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .nav-section {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0.5;
+}
+
+.nav-item {
+    color: black;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.small-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-nav-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+}
+
+.mobile-nav-items .nav-item {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mobile search bar */
+.mobile-search {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-search input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mobile-search button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.nav-item a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+  
+  .nav-item a.active {
+    color: #972726; /* Highlight the active link */
+    font-weight: bold; /* You can add more styles for the active state */
+  }
+  
+  .nav-item a:hover {
+    color: #972726; /* Change color on hover */
+    
+  }
+
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .small-icon {
+        display: none;
+    }
+
+    .mobile-search {
+        display: flex; /* Show search bar on small screens */
+        position: absolute;
+        top: 70px; /* Position at 50% from the top of the viewport */
+        left: 50%; /* Position at 50% from the left of the viewport */
+        transform: translate(-50%, -50%); /* Move the element back by 50% of its own width and height to center it */
+        width: 70%; /* Set width to 60% for responsiveness */
+        justify-content: center; /* Center the contents horizontally */
+        align-items: center; /* Center the contents vertically */
+    }
+    
+
+    .mobile-nav-items {
+        display: none;
+    }
+
+    .mobile-nav-items.open {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-search {
+        display: none; /* Hide search bar on larger screens */
+    }
+}
+.logo {
+    max-height: 80px; /* Adjust this value based on your design */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* nav end */
+
+a {
+    color: white; /* Change link color to white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+
+/* Ensure active link is visible */
+a.active {
+    color: #972726; /* Adjust this color for the active link */
+}
+
+ 
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+.container1 {
+    width: 100%;
+    padding: 50px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between; /* Spread items horizontally */
+    align-items: center; /* Align vertically */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    width: 100%;
+    max-width: 1051px;
+    margin: 0 auto;
+    gap: 0px;
+    
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.title {
+    font-size: 25px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.description {
+     font-size: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    margin-bottom:  20px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.image {
+    width: 350px;
+    height: auto;
+    background: #AEADAD;
+    margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .image {
+        width: 100%;
+        max-width: 318px;
+        margin-top: 20px;
+    }
+}
+
+
+/* dev section */
+.developers-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.devtitle {
+    font-size: 25px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    margin-bottom: 50px;
+    margin-top: 0px;
+}
+
+.developers-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.dev {
+    text-align: center;
+    max-width: 235px;
+    flex: 1;
+    margin: 10px;
+}
+
+.developer-name {
+    font-size: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.developer-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.developer-bio {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    word-wrap: break-word;
+    color: black;
+    line-height: 25px;
+    padding: 0 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .developers-container {
+        justify-content: space-evenly;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .developer-img {
+        width: 180px;
+        height: 180px;
+    }
+    .developer-name {
+        font-size: 18px;
+    }
+    .developer-bio {
+        font-size: 13px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .developers-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .developer-img {
+        width: 150px;
+        height: 150px;
+    }
+    .developer-name {
+        font-size: 16px;
+    }
+    .developer-bio {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .developer-img {
+        width: 120px;
+        height: 120px;
+    }
+    .developer-name {
+        font-size: 10px;
+    }
+    .developer-bio {
+        font-size: 8px;
+    }
+}
+
+/* dev end */
+
+/* vmg */
+.vmg {
+    width: 100%; /* Use full width for flexibility */
+    max-width: 1089px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the sections */
+    align-items: center; /* Horizontally centers the sections */
+    position: relative;
+    margin: 70px auto; /* Auto margin for horizontal centering */
+    padding: 0 20px; /* Add padding for mobile */
+}
+
+.section {
+    width: 100%; /* Make section width responsive */
+    max-width: 1000px;
+    height: auto; /* Let the height adapt to the content */
+    position: relative;
+    margin-bottom: 32px;
+    
+    height: 215px;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.section-background {
+    width: 100%;
+    height: 100%;
+    background: #D9D9D9;
+    border-radius: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section-title {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 36px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    color: #972726;
+}
+
+.section-content {
+    position: absolute;
+    top: 70px;
+    left: 20px; /* Adjusted for better responsiveness */
+    font-size: 18px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: black;
+    word-wrap: break-word;
+    line-height: 25px;
+    width: calc(100% - 40px); /* Adjusted to fit within container */
+}
+
+/* Specific adjustments per section if needed */
+.mission .section-content {
+    left: 20px;
+}
+
+.goal .section-content {
+    left: 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .section-title {
+        font-size: 32px;
+    }
+    .section-content {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vmg {
+        margin: 50px auto;
+        padding: 0 15px;
+    }
+    .section {
+        margin-bottom: 20px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .section-content {
+        top: 60px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 24px;
+        top: 10px;
+    }
+    .section-content {
+        top: 50px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+
+
+/* ads */
+.ads {
+    display: flex;
+    justify-content: center;
+    
+    padding: 20px; /* Add some padding for better spacing on smaller screens */
+    box-sizing: border-box;
+  }
+  
+  .cta-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1051px;
+    height: auto; /* Adjust height to be auto for better responsiveness */
+    position: relative;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .cta-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align items vertically in the center */
+    margin-right: 20px; /* Space between text/button and the image */
+  }
+  
+  .cta-text {
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    margin-bottom: 10px; /* Space between text and subtext */
+    text-align: center;
+    
+  }
+  
+  .cta-subtext {
+    color: #A90505;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-bottom: 30px; /* Space between subtext and button */
+    text-align: center;
+  }
+  
+  .cta-button {
+    padding: 10px;
+    width: 200px;
+    background: #972726;
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 130px; /* Remove left margin on smaller screens */
+  }
+ 
+  
+  .cta-button .button-text {
+    color: white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    
+  }
+  
+  .cta-image {
+    width: 400px;
+    height: auto; /* Keep the aspect ratio */
+  }
+
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1200px) {
+    .cta-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cta-content {
+      margin-right: 0;
+      text-align: center;
+    }
+  
+    .cta-button {
+      justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 160px;
+    margin-bottom: 20px;
+    }
+  
+    .cta-image {
+      width: 100%;
+      max-width: 1000px; /* Adjust image size */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cta-text {
+      font-size: 28px;
+    }
+  
+    .cta-subtext {
+      font-size: 24px;
+      margin-bottom: 20px; /* Adjust spacing */
+    }
+  
+    .cta-button {
+      width: 150px;
+      padding: 5px;
+      margin-left: 120px;
+    }
+  
+    .cta-button .button-text {
+      font-size: 18px;
+    }
+  
+    .cta-image {
+      width: 100%;
+      max-width: 700px; /* Adjust image size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cta-text {
+      font-size: 24px;
+    }
+  
+    .cta-subtext {
+      font-size: 20px;
+      margin-bottom: 15px; /* Adjust spacing */
+    }
+  
+    .cta-button {
+      width: 100px;
+      padding: 6px;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    }
+  
+    .cta-button .button-text {
+      font-size: 14px;
+    }
+  
+    .cta-image {
+      width: 100%;
+      max-width: 400px; /* Adjust image size */
+
+    }
+  }
+  
+  /* ads end */

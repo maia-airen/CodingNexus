@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+   
+  .nav-section {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0.5;
+}
+
+.nav-item {
+    color: black;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.small-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-nav-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+}
+
+.mobile-nav-items .nav-item {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mobile search bar */
+.mobile-search {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-search input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mobile-search button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.nav-item a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.nav-item a.active {
+  color: #972726; /* Highlight the active link */
+  font-weight: bold; /* You can add more styles for the active state */
+}
+
+.nav-item a:hover {
+  color: #972726; /* Change color on hover */
+  
+}
+
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .small-icon {
+        display: none;
+    }
+
+    .mobile-search {
+        display: flex; /* Show search bar on small screens */
+        position: absolute;
+        top: 70px; /* Position at 50% from the top of the viewport */
+        left: 50%; /* Position at 50% from the left of the viewport */
+        transform: translate(-50%, -50%); /* Move the element back by 50% of its own width and height to center it */
+        width: 70%; /* Set width to 60% for responsiveness */
+        justify-content: center; /* Center the contents horizontally */
+        align-items: center; /* Center the contents vertically */
+    }
+    
+
+    .mobile-nav-items {
+        display: none;
+    }
+
+    .mobile-nav-items.open {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-search {
+        display: none; /* Hide search bar on larger screens */
+    }
+}
+.logo {
+  max-height: 80px; /* Adjust this value based on your design */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* nav end */
+  
+  /* Responsive welcome text */
+
+  a {
+    color: white; /* Change link color to white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Ensure active link is visible */
+a.active {
+    color: #972726; /* Adjust this color for the active link */
+}
+
+
+  .container {
+    width: 100%;
+    padding: 20px;
+}
+  .welcome-text {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  /* Course grid */
+  .courses {
+    width: 100%;
+  max-width: 1056px;
+  margin: 0 auto;
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  position: relative;
+  }
+
+  .course-box {
+    width: 280px;
+    height: 280px;
+    position: relative; /* Removed absolute positioning */
+  }
+    
+  .course-card {
+    width: 280px;
+    height: 280px;
+    background: #963131;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #000000;
+  }
+  
+  .course-line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-top: 180px;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .course-button {
+    width: 100px;
+    height: 35px;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    font-family: Poppins, sans-serif;
+  }
+  
+  .red-btn {
+    background: #C25B5B;
+  }
+  
+  .dark-btn {
+    background: #3D3A3A;
+  }
+  

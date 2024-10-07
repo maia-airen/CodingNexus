@@ -1,0 +1,641 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.main-container {
+  width: 100%;
+  padding: 20px;
+}
+  
+.nav-section {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 0.5;
+}
+
+.nav-item {
+  color: black;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.small-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-nav-items {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  z-index: 1;
+}
+
+.mobile-nav-items .nav-item {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Mobile search bar */
+.mobile-search {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-search input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.mobile-search button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.nav-item a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.nav-item a.active {
+  color: #972726; /* Highlight the active link */
+  font-weight: bold; /* You can add more styles for the active state */
+}
+
+.nav-item a:hover {
+  color: #972726; /* Change color on hover */
+  
+}
+
+@media (max-width: 768px) {
+  .hamburger-icon {
+      display: block;
+  }
+
+  .nav-items {
+      display: none;
+  }
+
+  .small-icon {
+      display: none;
+  }
+
+  .mobile-search {
+      display: flex; /* Show search bar on small screens */
+      position: absolute;
+      top: 70px; /* Position at 50% from the top of the viewport */
+      left: 50%; /* Position at 50% from the left of the viewport */
+      transform: translate(-50%, -50%); /* Move the element back by 50% of its own width and height to center it */
+      width: 70%; /* Set width to 60% for responsiveness */
+      justify-content: center; /* Center the contents horizontally */
+      align-items: center; /* Center the contents vertically */
+  }
+  
+
+  .mobile-nav-items {
+      display: none;
+  }
+
+  .mobile-nav-items.open {
+      display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-search {
+      display: none; /* Hide search bar on larger screens */
+  }
+}
+
+.logo {
+  max-height: 80px; /* Adjust this value based on your design */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* nav end */
+
+a {
+  color: white; /* Change link color to white */
+  text-decoration: none; /* Remove underline from links */
+}
+
+
+/* Ensure active link is visible */
+a.active {
+  color: #972726; /* Adjust this color for the active link */
+}
+
+
+.content-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 100px;
+}
+
+.header-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: black;
+    font-size: 38px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.description-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.description {
+    color: black;
+    font-size: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    text-align: justify;
+}
+
+.view-courses-btn {
+    padding: 17px 40px;
+    background: #972726;
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-text {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+
+/* aboutsection */
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    height: auto;
+    background-color: black;
+    position: relative;
+    padding: 20px;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: space-between; /* Spread items horizontally */
+    align-items: center; /* Align vertically */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    width: 100%;
+    max-width: 1051px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .abt-content {
+    max-width: 500px;
+    color: white;
+  }
+  
+  .abttitle {
+    font-size: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .abtdescription {
+    font-size: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  
+  .image-placeholder {
+    width: 350px;
+    height: auto;
+    background: #AEADAD;
+    margin: 0 20px;
+  }
+  
+  .button-container {
+    margin-top: 30px;
+    width: 164px;
+    height: 47px;
+    background: #972726;
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+  }
+  .button-text{
+    color: rgb(255, 255, 255);
+    
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center;
+      padding-top: 50px;
+    }
+  
+    .abt-content {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .image-placeholder {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 700px;
+      height: 400px;
+    }
+  
+    .button-container {
+      margin-left: 270px;
+      width: 150px;
+      height: 40px;
+    }
+  
+    .button-text {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .abttitle {
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    .abtdescription {
+      font-size: 12px;
+      text-align: center;
+    }
+
+  
+    .image-placeholder {
+      width: 1px;
+    }
+  
+    .button-container {
+      width: 140px;
+      height: 40px;
+      margin: 0 auto;
+    }
+  
+    .button-text {
+      font-size: 18px;
+    }
+  }
+  
+  /* aboutsection end */
+  
+
+/* Services Section */
+/* Services section */
+
+.servicetop{
+    padding: 10px 40px;
+    
+}
+h1, h2{
+    font-weight: 400;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+}
+.servicetitle{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.servicedescription{
+
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.services {
+    width: 100%;
+    padding: 40px;
+    background-color: #f4f4f4;
+  }
+  
+  .service {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between boxes */
+    justify-items: center;
+    align-items: start;
+  }
+  
+  .servicesbox {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px; /* Ensure boxes don't grow too large */
+    transition: transform 0.3s;
+  }
+  
+  .servicesbox:hover {
+    transform: translateY(-5px); /* Adds a hover effect */
+  }
+  
+  .service-text {
+    font-size: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .service-description {
+    font-size: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .service {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service {
+      grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+  }
+/* service end */  
+
+/* ads */
+.ads {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    padding: 20px; /* Add some padding for better spacing on smaller screens */
+    box-sizing: border-box;
+  }
+  
+  .cta-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1063px;
+    height: auto; /* Adjust height to be auto for better responsiveness */
+    position: relative;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .cta-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align items vertically in the center */
+    margin-right: 20px; /* Space between text/button and the image */
+  }
+  
+  .cta-text {
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    margin-bottom: 10px; /* Space between text and subtext */
+    text-align: center;
+  }
+  
+  .cta-subtext {
+    color: #CB9393;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-bottom: 30px; /* Space between subtext and button */
+    text-align: center;
+  }
+  
+  .cta-button {
+    padding: 10px;
+    width: 150px;
+    background: #972726;
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 150px; /* Remove left margin on smaller screens */
+  }
+  
+  .cta-button .button-text {
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+  
+  .cta-image {
+    width: 400px;
+    height: auto; /* Keep the aspect ratio */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1200px) {
+    .cta-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cta-content {
+      margin-right: 0;
+      text-align: center;
+    }
+  
+    .cta-button {
+      justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 160px;
+    margin-bottom: 20px;
+    }
+  
+    .cta-image {
+      width: 100%;
+      max-width: 1000px; /* Adjust image size */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cta-text {
+      font-size: 28px;
+    }
+  
+    .cta-subtext {
+      font-size: 24px;
+      margin-bottom: 20px; /* Adjust spacing */
+    }
+  
+    .cta-button {
+      width: 150px;
+      padding: 5px;
+      margin-left: 120px;
+    }
+  
+    .cta-button .button-text {
+      font-size: 18px;
+    }
+  
+    .cta-image {
+      width: 100%;
+      max-width: 700px; /* Adjust image size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cta-text {
+      font-size: 24px;
+    }
+  
+    .cta-subtext {
+      font-size: 20px;
+      margin-bottom: 15px; /* Adjust spacing */
+    }
+  
+    .cta-button {
+      width: 100px;
+      padding: 6px;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    }
+  
+    .cta-button .button-text {
+      font-size: 14px;
+    }
+  
+    .cta-image {
+      width: 100%;
+      max-width: 400px; /* Adjust image size */
+
+    }
+  }
+  
+  /* ads end */
+
+/* Responsive design */ 
+@media (max-width: 768px) {
+    .nav-items {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-text .title {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .view-courses-btn {
+        width: auto;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    .nav-items {
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 16px;
+        padding: 1px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .view-courses-btn {
+        width: 100%;
+        padding: 12px 20px;
+        
+    }
+
+    .btn-text {
+        font-size: 18px;
+
+    }
+  }
+

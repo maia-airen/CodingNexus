@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-section {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0.5;
+}
+
+.nav-item {
+    color: black;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.small-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-nav-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+}
+
+.mobile-nav-items .nav-item {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mobile search bar */
+.mobile-search {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-search input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mobile-search button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.nav-item a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+  
+  .nav-item a.active {
+    color: #972726; /* Highlight the active link */
+    font-weight: bold; /* You can add more styles for the active state */
+  }
+  
+  .nav-item a:hover {
+    color: #972726; /* Change color on hover */
+    
+  }
+
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .small-icon {
+        display: none;
+    }
+
+    .mobile-search {
+        display: flex; /* Show search bar on small screens */
+        position: absolute;
+        top: 70px; /* Position at 50% from the top of the viewport */
+        left: 50%; /* Position at 50% from the left of the viewport */
+        transform: translate(-50%, -50%); /* Move the element back by 50% of its own width and height to center it */
+        width: 70%; /* Set width to 60% for responsiveness */
+        justify-content: center; /* Center the contents horizontally */
+        align-items: center; /* Center the contents vertically */
+    }
+    
+
+    .mobile-nav-items {
+        display: none;
+    }
+
+    .mobile-nav-items.open {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-search {
+        display: none; /* Hide search bar on larger screens */
+    }
+}
+
+.logo {
+    max-height: 80px; /* Adjust this value based on your design */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* nav end */
+ 
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* classroom nav  */
+
+.classroom-nav {
+    width: 100%;
+    max-width: 1280px;
+    height: 50px;
+    position: relative;
+    margin: 0 auto; /* Center the navigation */
+}
+
+.background-box {
+    width: 100%;
+    height: 50px;
+    background: #D9D9D9;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.title, .lectures, .activities, .students, .classroom-title {
+    font-family: 'JetBrains Mono', monospace;
+    word-wrap: break-word;
+}
+
+
+
+/* Adjust title for mobile */
+.title {
+    position: absolute;
+    left: 50%;
+    top: 11px;
+    transform: translateX(-50%);
+    font-size: 20px;
+    text-align: center;
+}
+
+.programming-title {
+    color: #A90505;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.lectures, .activities, .students, .classroom-title {
+    font-size: 14px;
+    position: absolute;
+    top: 16px;
+}
+
+/* Position elements closer to each other */
+.lectures {
+    right: 250px;
+    font-weight: bold;
+    color: #972726;
+}
+
+.activities {
+    right: 150px;
+}
+
+.students {
+    right: 60px;
+}
+
+.classroom-title {
+    left: 10px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none; /* Removes the underline */
+    color: black; /* Changes the text color to black */
+}
+
+a:hover {
+   color: #A90505;
+
+}
+
+
+
+/* If you want to target specific classes, you can define them like this: */
+.activities, .students, .classroom-title {
+    text-decoration: none; /* Removes the underline */
+    color: black; /* Changes the text color to black */
+}
+
+
+.lectures:hover, .activities:hover, .students:hover, .classroom-title:hover {
+   color: #A90505;
+}
+
+
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .title {
+        font-size: 18px;
+    }
+
+    .programming-title {
+        font-size: 18px;
+    }
+
+    .lectures, .activities, .students {
+        font-size: 12px;
+    }
+
+    .lectures {
+        right: 90px;
+    }
+
+    .activities {
+        right: 60px;
+    }
+
+    .students {
+        right: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .classroom-nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .title {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .programming-title {
+        font-size: 16px;
+    }
+
+    .lectures, .activities, .students {
+        display: block;
+        position: static;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .background-box {
+        height: auto;
+    }
+}
+
+  
+/* lms */
+.lms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the content */
+    align-items: flex-start; /* Align boxes to the top */
+    width: 100%;
+    max-width: 1004px; /* Maximum width to match original */
+    margin: 30px auto; /* Center on page */
+    position: relative;
+    padding-top: 20px; /* Add some space above */
+    gap: 40px;
+}
+
+.lms-title {
+    width: 100%; /* Make title full width */
+    text-align: center; /* Center title */
+    color: black;
+    font-size: 32px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    margin-bottom: 20px; /* Space below title */
+}
+
+.box {
+    width: 279px;
+    height: 186px;
+    position: relative; /* Change to relative for proper alignment */
+    margin: 10px; /* Space between boxes */
+}
+
+.box-background {
+    width: 100%;
+    height: 100%;
+    background: #D9D9D9;
+    border-radius: 8px; /* Optional: add rounded corners */
+    opacity: 0.5;
+}
+
+.box-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    word-wrap: break-word;
+}
