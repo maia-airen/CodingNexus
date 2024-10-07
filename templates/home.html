@@ -1,0 +1,122 @@
+
+{% extends "base.html" %}
+{%load static%}
+{% block title %}Coding Nexus{% endblock %}
+
+{% block content %}
+<style>
+    .nav-item a#home {
+    color: #972726; /* Highlight the active link */
+    font-weight: bold; /* You can add more styles for the active state */
+    }
+</style>
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+<div class="content-section">
+    <div class="header-text">
+        <div class="title">NEW TO PROGRAMMING?</div>
+    </div>
+    <div class="description-container">
+        <div class="description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+              ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+              in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+    <div class="view-courses-btn">
+        <div class="btn-text"> <a  href="courses.html" >COURSES </a></div>
+    </div>
+</div>
+</div>
+
+  <section class="about">
+    <div class="container">
+      <div class="main-content">
+        
+        <div class="abt-content">
+          <div class="abttitle">CODING NEXUS: A TOOL FOR NOVICE PROGRAMMERS</div>
+          <div class="abtdescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                  
+        </div>
+          <div class="button-container">
+            <div class="button-text"><a href="about.html>">MORE</a></div>
+          </div>
+        </div>
+        
+        <img class="image-placeholder" src="{% static 'images/abt.jpg' %}" />
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="servicetop">
+        <h1 class="servicetitle">OUR SERVICES</h1>
+    <h2 class="servicedescription"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h2>
+    </div>
+    
+    <div class="service">
+      
+      <div class="servicesbox">
+        <div class="service-text">Free Courses</div>
+        <div class="service-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        </div>
+      </div>
+      <div class="servicesbox">
+        <div class="service-text">Free Courses</div>
+        <div class="service-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        </div>
+      </div>
+      <div class="servicesbox">
+        <div class="service-text">Free Courses</div>
+        <div class="service-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        </div>
+      </div>
+      <div class="servicesbox">
+        <div class="service-text">Free Courses</div>
+        <div class="service-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        </div>
+      </div>
+      <div class="servicesbox">
+        <div class="service-text">Free Courses</div>
+        <div class="service-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        </div>
+      </div>
+      <div class="servicesbox">
+        <div class="service-text">Free Courses</div>
+        <div class="service-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="ads">
+    <div class="cta-section">
+      <div class="cta-content">
+        <div class="cta-text">ARE YOU READY TO LEARN?</div>
+        <div class="cta-subtext">JOIN OUR FREE COURSES NOW!</div>
+        <div class="cta-button">
+          <div class="button-text"><a href="courses.html">COURSES </a></div>
+        </div>
+      </div>
+      <img class="cta-image" src="{% static 'images/ads.jpg' %}" alt="CTA Image" />
+    </div>
+  </section>
+
+{% endblock %}

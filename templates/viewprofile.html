@@ -1,0 +1,87 @@
+
+{% extends "base.html" %}
+{%load static%}
+{% block title %}Coding Nexus{% endblock %}
+
+{% block content %}
+<style>
+    .nav-item a#profile {
+    color: #972726; /* Highlight the active link */
+    font-weight: bold; /* You can add more styles for the active state */
+    }
+</style>
+<link rel="stylesheet" href="{% static 'css/viewprofile.css' %}" />
+<div class="content">
+        
+    <div class="right-section">
+      <div class="profile-container">
+          <div class="view-container">
+              <div class="profile-section">
+                <div class="profile-info">
+                  <div class="profile-pic"></div>
+                  <div class="profile-field">
+                    <input type="text" placeholder="full name.." class="field-bg"> 
+                  </div>
+                  <div class="bio">
+                    <input type="text" placeholder="Bio.." class="field-bg"> 
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Course Box with content inside -->
+          
+          </div>
+            
+          <div class="view-container">
+            <div class="course-box">
+              <div class="box-title">CLASSROOM</div>
+              <!-- Existing course box content -->
+              <div class="course-headings">
+                <div class="course-heading">Classroom </div>
+                <div class="course-heading">Instructor</div>
+              </div>
+              <div class="course-row">
+                <div class="course-number">PC 112 </div>
+                <div class="lesson-name">Melanie Albarracin</div>
+              </div>
+              <!-- More course rows here -->
+            </div>
+          
+            <div class="course-box">
+              <div class="box-title">MISSED QUIZZES</div>
+              <!-- Missed quizzes content -->
+              <div class="course-headings">
+                <div class="course-heading">Quiz Name</div>
+                <div class="course-heading">Deadline Date</div>
+              </div>
+              <div class="course-row">
+                <div class="course-number">CS 101</div>
+                <div class="quiz-date">10/04/2024</div>
+              </div>
+            </div>
+          
+            <div class="course-box">
+              <div class="box-title">TO-DO LIST</div>
+              <div class="course-headings">
+                <div class="course-heading">Task</div>
+                <div class="course-heading">Due Date</div>
+              </div>
+              <div class="course-row">
+                <div class="course-number">Complete Project Report</div>
+                <div class="quiz-date">10/10/2024</div>
+              </div>
+            </div>
+          </div>
+          
+        
+              
+        </div>
+            
+      </div>
+      
+</div>
+</div>
+
+
+</div>
+{% endblock %}

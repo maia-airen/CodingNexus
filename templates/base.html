@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Coding Nexus{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/globals.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="{% static 'images/logo.ico' %}" type="image/x-icon" />
+    <style>
+        /* Ensure the html and body take full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Main container to take remaining space */
+        .main-container {
+            flex: 1; /* Ensures the main content expands to fill available space */
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #972726;
+            padding: 10px 20px;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        main {
+            flex: 1; /* Pushes footer down */
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+      <div class="nav-section">
+        <div class="nav-icon">
+            <img src="{% static 'images/logo.png' %}" alt="CN Logo" class="logo" />
+        </div>
+        <div class="nav-items">
+            <div class="nav-item"><a id="home" href="{% url 'home' %}">HOME</a></div>
+            <div class="nav-item"><a id="course" href="{% url 'course' %}">COURSES</a></div>
+            <div class="nav-item"><a id="classroom" href="{% url 'classroom' %}">CLASSROOM</a></div>
+            <div class="nav-item"><a id="about" href="{% url 'about' %}">ABOUT</a></div>
+            {% if user.is_authenticated %}
+            <div class="nav-item"><a id="profile" href="{% url 'profile' %}">PROFILE</a></div>
+            <div class="nav-item"><a href="{% url 'logout' %}">LOGOUT</a></div>
+            {% else %}
+            <div class="nav-item"><a href="{% url 'login' %}">LOGIN</a></div>
+            {% endif %}  
+        </div>
+    </div>
+    
+    <div class="mobile-nav-items" id="mobileNav">
+        <div class="nav-item">HOME</div>
+        <div class="nav-item">COURSES</div>
+        <div class="nav-item">EDUCATORS</div>
+        <div class="nav-item">ABOUT</div>
+        <div class="nav-item">PROFILE</div>
+        <div class="nav-item">LOGIN</div>
+    </div>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p class="footer-text">© 2024 Coding Nexus. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            var mobileNav = document.getElementById("mobileNav");
+            mobileNav.classList.toggle("open");
+        }
+    </script>
+
+</body>
+</html>

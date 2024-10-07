@@ -1,0 +1,54 @@
+
+{% extends "base.html" %}
+{%load static%}
+{% block title %}Coding Nexus{% endblock %}
+
+{% block content %}
+<style>
+    .nav-item a#profile {
+    color: #972726; /* Highlight the active link */
+    font-weight: bold; /* You can add more styles for the active state */
+    }
+</style>
+<link rel="stylesheet" href="{% static 'css/deleteacc.css' %}" />
+<div class="content">
+        
+    <div class="user-sidebar">
+      <div class="user-info">
+        <div class="user-avatar"></div>
+        <div class="user-banner"></div>
+        <div class="username">Last Name</div>
+        <a href="{% url 'view_profile' %}" class="view-profile">VIEW PROFILE</a>
+          <a href="{% url 'profile' %}" class="edit-profile">MANAGE ACCOUNT</a>
+          <a href="{% url 'my_classes' %}" class="my-courses">MY CLASSROOM</a>
+          <a href="{% url 'my_exercises' %}" class="my-exercises">MY EXERCISES</a>
+          <a href="{% url 'my_quizzes' %}" class="my-quizzes">MY QUIZZES</a>
+          
+      </div>
+    </div>
+    <div class="right-section">
+        <div class="profile-container">
+            <div class="deletebox">
+                <div class="header">Account Deletion</div>
+
+                <div class="description">
+                  We’re sorry to see you go! If you wish to delete your account from our E-Learning Hub, please note that this action is permanent and all your data, including progress, saved courses, and achievements, will be lost. To proceed, select the <b>"Delete Account"</b> button below. For any questions or assistance, please contact our support team.
+                  <br/><br/>
+                  Thank you for being part of our learning community!
+                </div>
+                
+                <div class="delete-button">
+                    <div class="button-text">Delete Account</div>
+                  </div>
+              </div>
+              
+        </div>
+      </div>
+      
+</div>
+  
+  
+</div>
+
+
+{% endblock %}

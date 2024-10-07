@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Page</title>
+    <link rel="stylesheet" href="{% static 'css/LRStyle.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="icon" href="{% static 'images/logo.ico' %}" type="image/x-icon" />
+</head>
+<body>
+    <div class="container">
+        <div class="box-container">
+            <form class="form_main" action="{% url 'verify_otp' %}" method="POST">
+              {% csrf_token %}
+            <div class="form-container">
+            <div class="welcome-text">Verification</div><br>
+            <div class="overlap-group-2">
+              <p class="we-have-sent-a">
+                We have sent a 6-Digit confirmation code to your e-mail.
+              </p><br>
+            </div>
+                
+                <div class="input-wrapper OTP">
+                    <input placeholder="OTP" name="otp" type="text" class="input-background" required>
+                </div>
+                <div class="member-container">
+                    <a href="{% url 'register' %}" class="click-here">Not your email?</a>
+                </div>
+
+                <button class="continue-button">Continue</button>
+                
+            </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+<footer class="footer">
+    <p class="footer-text">© 2024 Coding Nexus. All Rights Reserved.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+<script>
+    // Initialize Notyf
+    var notyf = new Notyf({
+        position: {
+          x: 'center', 
+          y: 'top',     
+        }
+      });
+  
+    // Function to display notifications
+    function showSuccessMessage(message) {
+      notyf.success(message);
+    }
+  
+    function showErrorMessage(message) {
+      notyf.error(message);
+    }
+  </script>
+  
+  <!-- In this case, using Django's messages framework -->
+  {% if messages %}
+    <script>
+      {% for message in messages %}
+        {% if message.tags == 'success' %}
+          showSuccessMessage("{{ message }}");
+        {% elif message.tags == 'error' %}
+          showErrorMessage("{{ message }}");
+        {% endif %}
+      {% endfor %}
+    </script>
+  {% endif %}
+</html>

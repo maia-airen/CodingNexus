@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{%load static%}
+{% block title %}Coding Nexus{% endblock %}
+
+{% block content %}
+
+<style>
+    .nav-item a#classroom {
+    color: #972726; /* Highlight the active link */
+    font-weight: bold; /* You can add more styles for the active state */
+    }
+</style>
+<link rel="stylesheet" href="{% static 'css/educator.css' %}" />
+
+<div class="container">
+    <div class="title-container">
+      <div class="title">CLASSES YOU ARE ENROLLED</div>
+      <div class="join-class-button">
+          <div class="join-class-bg"></div>
+          <div class="join-class-text">Join Class</div>
+      </div>
+  </div>
+    <div class="educators">
+      <a href="lectures.html">
+        <div class="teacher-card">
+            <img class="card-background" src="{% static 'images/classroombg.jpg' %}">
+            <div class="teacher-name">BSIT 1A - CC112</div>
+          </div>
+      </a>
+
+      <a href="lectures.html">
+        <div class="teacher-card">
+          <img class="card-background" src="{% static 'images/classroombg.jpg' %}">
+          <div class="teacher-name">BSIT 1A - CC112</div>
+        </div>
+      </a>
+
+      <a href="lectures.html">
+        <div class="teacher-card">
+          <img class="card-background" src="{% static 'images/classroombg.jpg' %}">
+          <div class="teacher-name">BSIT 1A - CC112</div>
+        </div>
+      </a>
+
+      <a href="lectures.html">
+        <div class="teacher-card">
+          <img class="card-background" src="{% static 'images/classroombg.jpg' %}">
+          <div class="teacher-name">BSIT 1A - CC112</div>
+        </div>
+      </a>
+
+      <a href="lectures.html">
+        <div class="teacher-card">
+          <img class="card-background" src="{% static 'images/classroombg.jpg' %}">
+          <div class="teacher-name">BSIT 1A - CC112</div>
+        </div>
+      </a>
+      <a href="lectures.html">
+        <div class="teacher-card">
+          <img class="card-background" src="{% static 'images/classroombg.jpg' %}">
+          <div class="teacher-name">BSIT 1A - CC112</div>
+        </div>
+      </a>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,97 @@
+
+{% extends "base.html" %}
+{%load static%}
+{% block title %}Coding Nexus{% endblock %}
+
+{% block content %}
+<style>
+    .nav-item a#about {
+    color: #972726; /* Highlight the active link */
+    font-weight: bold; /* You can add more styles for the active state */
+    }
+</style>
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+<section class="container1">
+    <div class="content">
+        <div class="text-content">
+            <h1 class="title">CODING NEXUS: A TOOL FOR NOVICE PROGRAMMERS</h1>
+            <div class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                anim id est laborum.                    
+            </div>
+        </div>
+        <img class="image" src="{% static 'images/abt.jpg' %}" alt="Placeholder Image" />
+    </div>
+</section>
+
+<section class="developers-section">
+    <div class="devtitle">THE DEVELOPERS</div>
+
+    <div class="developers-container">
+        <div class="dev">
+            <img class="developer-img" src="{% static 'images/chyym.jpg' %}" alt="Developer Image">
+            <div class="developer-name">Chymbeh Lood</div>
+            <div class="developer-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+        <div class="dev">
+            <img class="developer-img" src="{% static 'images/airen.jpg' %}" alt="Developer Image">
+            <div class="developer-name">Airen Rubia</div>
+            <div class="developer-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+        <div class="dev">
+            <img class="developer-img" src="{% static 'images/glay.jpg' %}" alt="Developer Image">
+            <div class="developer-name">Glaydel Velos</div>
+            <div class="developer-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+        <div class="dev">
+            <img class="developer-img" src="{% static 'images/cedric.jpg' %}" alt="Developer Image">
+            <div class="developer-name">Cedric Lim</div>
+            <div class="developer-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+    </div>
+</section>
+
+<section class="vmg">
+    <div class="section vision">
+        <div class="section-background"></div>
+        <div class="section-title">OUR VISION</div>
+        <div class="section-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+        </div>
+    </div>
+
+    <div class="section mission">
+        <div class="section-background"></div>
+        <div class="section-title">OUR MISSION</div>
+        <div class="section-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+        </div>
+    </div>
+
+    <div class="section goal">
+        <div class="section-background"></div>
+        <div class="section-title">OUR GOAL</div>
+        <div class="section-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+        </div>
+    </div>
+</section>
+
+<section class="ads">
+    <div class="cta-section">
+      <div class="cta-content">
+        <div class="cta-text">ARE YOU READY TO LEARN?</div>
+        <div class="cta-subtext">JOIN OUR FREE COURSES NOW!</div>
+        <div class="cta-button">
+          <div class="button-text"><a href="courses.html">VIEW COURSES</a></div>
+        </div>
+      </div>
+      <img class="cta-image" src="{% static 'images/ads.jpg' %}" alt="CTA Image" />
+    </div>
+  </section>
+</div>
+{% endblock %}

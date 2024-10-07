@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{%load static%}
+{% block title %}Coding Nexus{% endblock %}
+
+{% block content %}
+<style>
+    .nav-item a#profile {
+    color: #972726; /* Highlight the active link */
+    font-weight: bold; /* You can add more styles for the active state */
+    }
+</style>
+<link rel="stylesheet" href="{% static 'css/editprofile.css' %}" />
+  <div class="content">
+      
+        <div class="user-sidebar">
+          <div class="user-info">
+            <div class="user-avatar"></div>
+            <div class="user-banner"></div>
+            <div class="username">Last Name</div>
+            <a href="{% url 'view_profile' %}" class="view-profile">VIEW PROFILE</a>
+              <a href="{% url 'profile' %}" class="edit-profile">MANAGE ACCOUNT</a>
+              <a href="{% url 'my_classes' %}" class="my-courses">MY CLASSROOM</a>
+              <a href="{% url 'my_exercises' %}" class="my-exercises">MY EXERCISES</a>
+              <a href="{% url 'my_quizzes' %}" class="my-quizzes">MY QUIZZES</a>
+              
+          </div>
+        </div>
+        
+        <div class="right-section">
+          <div class="profile-container">
+            <div class="profile-content">
+              <div class="avatar-container">
+                <div class="avatar"></div>
+                <a href="changephoto.html" class="edit-link">edit</a>
+              </div>
+              <div class="profile-info">PROFILE INFORMATION:</div>
+              <input class="info-field" type="text" placeholder="username....">
+            <input class="info-field" type="text" placeholder="first name...">
+            <input class="info-field" type="text" placeholder="last name...">
+            <input class="info-field" type="number" placeholder="student number">
+            <div class="bio-container">
+                <textarea class="bio-text" placeholder="add bio..."></textarea>
+            </div>
+            <div class="btn-save">SAVE</div>
+              </div>
+            </div>
+         </div>
+  </div>
+    
+    
+  </div>
+{% endblock %}

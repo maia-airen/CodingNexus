@@ -1,0 +1,72 @@
+
+{% extends "base.html" %}
+{%load static%}
+{% block title %}Coding Nexus{% endblock %}
+
+{% block content %}
+<style>
+    .nav-item a#profile {
+    color: #972726; /* Highlight the active link */
+    font-weight: bold; /* You can add more styles for the active state */
+    }
+</style>
+<link rel="stylesheet" href="{% static 'css/profileexercise.css' %}" />
+<div class="content">
+        
+    <div class="user-sidebar">
+      <div class="user-info">
+        <div class="user-avatar"></div>
+        <div class="user-banner"></div>
+        <div class="username">Last Name</div>
+        <a href="{% url 'view_profile' %}" class="view-profile">VIEW PROFILE</a>
+          <a href="{% url 'profile' %}" class="edit-profile">MANAGE ACCOUNT</a>
+          <a href="{% url 'my_classes' %}" class="my-courses">MY CLASSROOM</a>
+          <a href="{% url 'my_exercises' %}" class="my-exercises">MY EXERCISES</a>
+          <a href="{% url 'my_quizzes' %}" class="my-quizzes">MY QUIZZES</a>
+          
+      </div>
+    </div>
+
+    <div class="right-section">
+        <div class="profile-container">
+          <div class="course-container">
+            <div class="course-title">MY EXERCISES</div>
+            
+            <!-- Course Box with content inside -->
+            <div class="course-box">
+              <div class="course-headings">
+                <div class="course-heading">Exercise Name</div>
+                <div class="course-heading">Exercise Number</div>
+              </div>
+              
+              <div class="course-row">
+                <div class="course-number">Exercise Name</div>
+                <div class="lesson-name">Exercise 1</div>
+              </div>
+              <div class="course-row">
+                <div class="course-number">Exercise Name</div>
+                <div class="lesson-name">Exercise 1</div>
+              </div>
+              <div class="course-row">
+                <div class="course-number">Exercise Name</div>
+                <div class="lesson-name">Exercise 1</div>
+              </div>
+              <div class="course-row">
+                <div class="course-number">Exercise Name</div>
+                <div class="lesson-name">Exercise 1</div>
+              </div>
+              <div class="course-row">
+                <div class="course-number">Exercise Name</div>
+                <div class="lesson-name">Exercise 1</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</div>
+  
+  
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{%load static%}
+{% block title %}Coding Nexus{% endblock %}
+
+{% block content %}
+
+<style>
+    .nav-item a#course {
+    color: #972726; /* Highlight the active link */
+    font-weight: bold; /* You can add more styles for the active state */
+    }
+</style>
+<link rel="stylesheet" href="{% static 'css/courses.css' %}" />
+
+    <div class="welcome-text">WELCOME TO COURSES</div>
+    <div class="courses">
+        <div class="course-box" onclick="window.location.href='lesson.html';">
+            <div class="course-card">
+                <img class="course-card" src="{% static 'images/coursebg.jpg' %}" alt="programming 1">
+            
+            </div>
+        </div>
+
+        <div class="course-box" onclick="window.location.href='lesson.html';">
+        
+                <img class="course-card" src="{% static 'images/course2bg.jpg' %}" alt="programming 1">
+        
+        </div>
+
+        <div class="course-box" onclick="window.location.href='lesson.html';">
+            <img class="course-card" src="{% static 'images/course3bg.jpg' %}" alt="programming 1">
+        </div>
+
+        <div class="course-box" onclick="window.location.href='lesson.html';">
+            <img class="course-card" src="{% static 'images/course4bg.jpg' %}" alt="programming 1">
+        </div>
+
+        <div class="course-box" onclick="window.location.href='lesson.html';">
+        <div class="course-card">
+            <img class="course-card" src="{% static 'images/course5bg.jpg' %}" alt="programming 1">
+        </div>
+    </div>
+
+    <div class="course-box" onclick="window.location.href='lesson.html';">
+        <img class="course-card" src="{% static 'images/course6bg.png' %}" alt="programming 1">
+
+    </div>
+    </div>
+    </div>
+
+
+{% endblock %}
