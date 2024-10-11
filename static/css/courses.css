@@ -245,3 +245,31 @@ a.active {
     background: #3D3A3A;
   }
   
+
+ /* Styling the Join Class button */
+ .join-btn {
+  display: none; /* Hide the button by default */
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #972726;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Poppins, sans-serif;
+}
+
+/* Show the button on hover */
+.course-box:hover .join-btn {
+  display: block;
+
+}
+
+/* Add hover effects for the button */
+.join-btn:hover {
+  background-color: #6a1b1b;
+}
